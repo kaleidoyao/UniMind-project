@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="UniMind: Unleashing the Power of LLMs for Unified Multi-Task Brain Decoding">
   <meta name="keywords" content="UniMind, EEG, Brain Decoding, Large Language Models, LLM, Neuro-Language Connector, Task-aware Query Selection, Multi-task Learning">
-  <meta name="author" content="Weiheng Lu, Chunfeng Song, Jiamin Wu, Pengyu Zhu, Yuchen Zhou, Weijian Mai, Qihao Zheng, Wanli Ouyang">
+  <meta name="author" content="Weiheng Lu1,2*, Zhouheng Yao1*, Jiamin Wu1,3†, Pengyu Zhu1, Yuchen Zhou1, Weijian Mai1, Qihao Zheng1, Wanli Ouyang1,3, Chunfeng Song1">
 
   <meta property="og:title" content="UniMind: Unified Multi-Task Brain Decoding">
   <meta property="og:description" content="A general-purpose EEG foundation model that leverages LLMs for unified multi-task brain decoding.">
@@ -50,14 +50,14 @@
 
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Google Sans', sans-serif;
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
       color: #182033;
       background: #ffffff;
       line-height: 1.65;
     }
 
     .publication-title {
-      font-family: 'Google Sans', sans-serif;
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 3rem;
       line-height: 1.125;
       letter-spacing: -0.01em;
@@ -65,20 +65,37 @@
       color: #151b2d;
     }
 
-
     .publication-authors {
-      font-family: 'Google Sans', sans-serif;
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
       margin-top: 1.35rem;
-      font-size: 1.08rem;
-      line-height: 1.8;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .author-block {
+      display: inline-block;
+      margin-right: 0.1rem;
     }
 
     .publication-authors a {
       color: var(--main-color);
-      border-bottom: 1px solid rgba(75, 99, 209, 0.25);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
     }
 
-    .publication-authors sup { color: #5b6475; }
+    .publication-authors a:hover {
+      color: #1f4c9e;
+      border-bottom: 2px solid var(--main-color);
+    }
+
+    .publication-authors sup { 
+      color: #1f4c9e;
+      font-size: 0.85em;
+    }
 
     .publication-links {
       margin-top: 1.5rem;
@@ -89,7 +106,7 @@
     }
 
     .button {
-      font-family: 'Google Sans', sans-serif;
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     .button.is-dark {
@@ -113,7 +130,7 @@
     }
 
     .section-title {
-      font-family: 'Google Sans', sans-serif;
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 2rem;
       font-weight: 500;
       letter-spacing: -0.03em;
@@ -275,7 +292,7 @@
 
     .number-box strong {
       display: block;
-      font-family: 'Google Sans', 'Noto Sans', sans-serif;
+        font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 2.25rem;
       line-height: 1;
       color: var(--main-color);
@@ -297,8 +314,7 @@
     }
 
     table.table, table.table th, table.table td {
-      /* font-family: 'Times New Roman', Times, serif; */
-      font-family: 'Google Sans', sans-serif;
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     table.table th {
@@ -364,19 +380,25 @@
         
 
         <div class="publication-authors">
-          <span>Weiheng Lu<sup>*</sup></span>,
-          <span>Chunfeng Song<sup>*</sup></span>,
-          <span>Jiamin Wu<sup>†</sup></span>,
-          <span>Pengyu Zhu</span>,
-          <span>Yuchen Zhou</span>,
-          <span>Weijian Mai</span>,
-          <span>Qihao Zheng</span>,
-          <span>Wanli Ouyang</span>
+          <span class="author-block">Weiheng Lu<sup>1,2*</sup>,</span>
+          <span class="author-block">Zhouheng Yao<sup>1*</sup>,</span>
+          <span class="author-block">Jiamin Wu<sup>1,3†</sup>,</span>
+          <span class="author-block">Pengyu Zhu<sup>1</sup>,</span>
+          <span class="author-block">Yuchen Zhou<sup>1</sup>,</span>
+          <span class="author-block">Weijian Mai<sup>1</sup>,</span>
+          <span class="author-block">Qihao Zheng<sup>1</sup>,</span>
+          <span class="author-block">Wanli Ouyang<sup>1,3</sup>,</span>
+          <span class="author-block">Chunfeng Song<sup>1</sup></span>
         </div>
 
-        <div class="is-size-6 mt-2 has-text-grey" style="font-family: 'Google Sans', sans-serif;">
-          Shanghai Artificial Intelligence Laboratory &nbsp;·&nbsp; Peking University &nbsp;·&nbsp; The Chinese University of Hong Kong<br>
-          <sup>*</sup>Equal contribution &nbsp;&nbsp; <sup>†</sup>Correspondence
+        <div class="publication-authors" style="font-size: 1.1rem; margin-top: 0.8rem;">
+          <span class="author-block"><sup>1</sup>Shanghai Artificial Intelligence Laboratory,</span>
+          <span class="author-block"><sup>2</sup>Peking University,</span>
+          <span class="author-block"><sup>3</sup>The Chinese University of Hong Kong</span>
+        </div>
+
+        <div style="font-size: 1rem; color: #5f6b7a; margin-top: 0.6rem; font-style: italic;">
+          <small><sup>*</sup>Indicates Equal Contribution,&nbsp;<sup>†</sup>Indicates Correspondence Authors</small>
         </div>
 
         <div class="publication-links">
@@ -489,7 +511,7 @@
         <button class="copy-button" onclick="copyBibtex()"><i class="fas fa-copy"></i> Copy</button>
         <pre class="bibtex" id="bibtex">@article{lu2025unimind,
   title   = {UniMind: Unleashing the Power of LLMs for Unified Multi-Task Brain Decoding},
-  author  = {Lu, Weiheng and Song, Chunfeng and Wu, Jiamin and Zhu, Pengyu and Zhou, Yuchen and Mai, Weijian and Zheng, Qihao and Ouyang, Wanli},
+  author  = {Lu, Weiheng and Yao, Zhouheng and Wu, Jiamin and Zhu, Pengyu and Zhou, Yuchen and Mai, Weijian and Zheng, Qihao and Ouyang, Wanli and Song, Chunfeng},
   journal = {arXiv preprint arXiv:2506.18962},
   year    = {2025},
   url     = {https://arxiv.org/abs/2506.18962}
